@@ -8,6 +8,7 @@ import dotenv from "dotenv";
 import reviewRouter from "./routes/reviewRouter.js";
 import inquiryRouter from "./routes/inquiryRouter.js";
 import cors from "cors";
+import orderRouter from "./routes/orderRouter.js";
 
 dotenv.config();
 
@@ -50,8 +51,9 @@ app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/reviews", reviewRouter);
 app.use("/api/inquiries", inquiryRouter);
+app.use("/api/orders",orderRouter)
 
-app.listen(3000, () => {
+app.listen(5000, () => {
   console.log("Server is running on port 3000");
 });
 
